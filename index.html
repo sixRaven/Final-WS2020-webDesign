@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Final</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./main.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h2 class="name">YUANHAO LIU</h2>
+        <div class="header-catagory">
+            <div class="worksdropdown">
+                <!-- <h2 class="headerheadline">WORKS</h1> -->
+                <h2 class="works">WORKS</h2>
+                <div class="dropdown-items">
+                    <a href="#work1" class="work1">Sushi Photobook</a>
+                    <a href="#work2" class="work2">Plastic Tree Plus City Hall</a>
+                    <a href="#work3" class="work3">What is Code?</a>
+                    <!-- <a href="#work4" class="photography">photography</a> -->
+                </div>
+            </div>
+            <div class="about">
+                <h2 class="headerheadline">WS2020</h2>
+            </div>
+        </div>
+    </div>
+   
+    <slider>
+        <slide><p>Web Design WS2020</p></slide>
+        <slide><p style="color: black;">Sushi Photobook</p></slide>
+        <slide><p style="color: black;">Plastic Tree Plus City Hall</p></slide>
+        <slide class="slide4"><p style="color: black;">What is Code?</p></slide>
+    </slider>
+    <button class="godown" ><a href="#work1">Go</a></button>
+    <div class="maincontent-me" id="work1">
+        <div class = "myphoto" id="myphoto1">
+            <img src="./assets/main_fish.png" class = "fish"></img>
+        </div>
+        <div class="myinfo">
+            <a href="https://sixraven.github.io/sushibook/" class="toAbout">Sushi Photobook</a>
+            <p>A photobook that tells you the story of 5 types of most popular sushi in Japan</p>
+        </div>
+    </div>
+     <div class="maincontent-me" id="work2">
+        <div class = "myphoto" id="myphoto2">
+            <img src="./assets/Layer 1.png" class = "plasticTree"></img>
+        </div>
+        
+        <div class="myinfo">
+            <a href="https://sixraven.github.io/Project-2/" class="toAbout">Plastic Tree Plus City Hall, 2020</a>
+            <p>A new interpretation of a famous painting of David Hockney-Pay close attention to the space!</p>
+        </div>
+    </div>
+    <div class="maincontent-me" id="work3">
+        <div class = "myphoto" id="myphoto3">
+            <img src="./assets/angry.gif" class = "figure"></img>
+        </div>
+        <div class="myinfo">
+            <a href="https://sixraven.github.io/whatiscode/" class="toAbout">What is Code?</a>
+            <p>What is code again?</p>
+        </div>
+    </div>
+    <!-- <div class="maincontent-me" id="work4">
+        <div class = "myphoto" id="myphoto4"></div>
+        <div class="myinfo">
+            <a href="" class="toAbout">ABOUT</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iste, facilis consequatur eligendi odio tempore.</p>
+        </div>
+    </div> -->
+    
+    <!-- <div class="back">
+        <button class="test" onclick="getImage()">test</button>
+        <img src="" alt="" id="imageBox" class="imageBox">
+        <button class="test" onclick="getImage()">test</button>
+    </div> -->
+
+   
+</body>
+
+<script>
+    $(".godown").click(function(){
+            // var h=$(window).scrollTop(); //获取当前滚动条距离顶部的位置
+            h = $(window).height();
+     $("html,body").animate({ scrollTop: h}, 800);//点击按钮向下移动800px，时间为800毫秒
+    });
+    $(function(){
+        $(".header").fadeIn("slow");
+    
+    });
+  
+</script>
+
+</html>

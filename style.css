@@ -1,0 +1,217 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0px;
+}
+body::-webkit-scrollbar {
+    display: none;
+    }
+slider {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: beige;
+    overflow: hidden;
+    font-family: 'Optima', sans-serif;
+    /* position: absolute; */
+}
+.toAbout{
+    text-decoration: none;
+}
+
+slider >*{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: blueviolet;
+    animation: slide 12s infinite;
+    overflow: hidden;
+    /* font-family: 'Optima', sans-serif; */
+}
+slide:nth-child(1){
+    left: 0%;
+    animation-delay: -1s;
+    /* background-image: url(1.jpg); */
+    background-color: brown;
+    background-size: cover;
+    background-position: center;
+    z-index: 3;
+   }
+   
+   slide:nth-child(2){
+    animation-delay: 2s;
+    background-image: url(./assets/WeChat\ Screenshot_20200205112542.png);
+    /* background-color: rgb(146, 196, 133); */
+    background-size: cover;
+    background-position: center;
+    z-index: 2;  
+}
+   
+   slide:nth-child(3){
+    animation-delay: 5s;
+    background-image: url(./assets/WeChat\ Screenshot_20200205112841.png);
+    /* background-color: rgb(228, 231, 53); */
+    background-size: cover;
+    background-position: center;
+    z-index: 1;  
+}
+   
+   slide:nth-child(4){
+    left: 0%;
+    animation-delay: 8s;
+    background-image: url(./assets/WeChat\ Screenshot_20200205113007.png);
+    /* background-color: rgb(57, 47, 201); */
+    background-size: cover;
+    background-position: center;
+   }
+slide p {
+    font-family: 'Optima', sans-serif;
+    font-size: 70px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 340px;
+    color: #fff;
+   }
+   
+
+   
+
+.header{
+    width: 100%;
+    height: 100px;
+    top: 0px;
+    padding: 20px;
+    position: fixed;/*to make the header fixed when scroll*/
+    background-color: rgb(224, 121, 121,0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+.header.sticky{
+    /* padding-top: 0px; */
+    height: 50px;
+    background-color: white;
+    filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.25));
+    transition: height 500ms ease-in-out;
+    transition: background-color 300ms ease;
+}
+.header-catagory{
+    width: 600px;
+    height: 80px;
+    margin-top: 0px;
+    margin-right: 100px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    float: right;
+    text-align: center;
+}
+.dropdown-items{
+        display: none;
+        /* position: absolute; */
+        background-color: #f1f1f1;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        font-family: 'Optima', sans-serif;
+}
+.dropdown-items a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none; /*get rid of the underline of links*/
+    display: block; /*to make the dropdown one item each row*/
+}
+.name{
+    /* border: 1px solid black; */
+    padding: 20px 200px;
+    margin-top: 10px;
+    margin-left: 100px;
+    float: left;
+}
+.back{
+    background-color: rgb(241, 241, 241);
+    display: grid;
+    grid-template-columns: repeat(2, 15% 70% 15%);
+    width: 100vw;
+    height: 100vh; /*recall how to set its height to just fullfill the page view*/
+}
+.godown{
+    position: absolute;
+    top:80%;
+    left: 46%;
+    width: 100px;
+    height: 25px;
+    z-index: 10;
+}
+.maincontent-me{
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+/* .maincontent-me >*{
+    border: 1px solid black;
+} */
+.myphoto{
+    position: relative;
+    top: 35%;
+    left: 45%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* background-color: blue; */
+}
+#myphoto4{
+    background-color: brown;
+}
+#myphoto1{
+    background-color: rgb(146, 196, 133);
+}
+#myphoto2{
+    background-color: rgb(228, 231, 53);
+}
+#myphoto3{
+    background-color: rgb(57, 47, 201);
+}
+.myinfo{
+    position: relative;
+    /* top:10% */
+    margin-top: 100px;
+    padding: 200px 350px 200px 240px;
+    font-family: 'Optima', sans-serif;
+}
+.plasticTree{
+    position: relative;
+    left: -35%;
+    top: -100%;
+    transform: scale(0.5);
+}
+.fish{
+    position: relative;
+    left: -155%;
+    top: -20%;
+    transform: scale(0.25);
+}
+.figure{
+    position: relative;
+    left: 10%;
+    top: -20%;
+    transform: scale(1.5);
+}
+
+
+.worksdropdown:hover .dropdown-items{
+    display: block;
+}
+@keyframes slide {
+    0% { left: 100%; width: 100%; }
+    5% { left: 0%; }
+    25% { left: 0%; }
+    30% { left: -100%; width: 100%; }
+    30.0001% { left: -100%; width: 0%; }
+    100% { left: 100%; width: 0%; }
+   }
